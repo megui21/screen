@@ -1,0 +1,8 @@
+<%= @video.name %>
+<%= render 'reviews/new' %>
+<% @video.reviews.each do |review| %>
+<div>
+  <%= review.rating %>
+  <%= review.comment %>
+</div>
+<% end %>

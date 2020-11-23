@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <h3>Add a review </h3>
+      <%= simple_form_for [@video, @review], url:  interview_video_reviews_path(@interview, @video), method: :post do |f| %>
+      <div class="form-inputs">
+        <%= f.input :rating %>
+        <%= f.input :comment %>
+      </div>
+      <div class="form-actions">
+      <%= f.submit class: "btn btn-primary"%>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

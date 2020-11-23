@@ -1,0 +1,18 @@
+<h1>Your Campaigns</h1>
+<div class="btn">
+  <%= link_to "Create New", new_interview_path, class: "btn btn-primary btn-lg" %>
+</div>
+
+<% @interviews.each do |interview| %>
+
+<div class="card-product2">
+
+    <%= link_to interview_videos_path(interview) do %>
+    <div class="card-product-infos">
+    <h2><%= interview.name %></h2>
+    <p><%= interview.company %> - <strong><%= interview.days_remaining %> days</strong> left.</p>
+
+  </div>
+  <% end %>
+</div>
+<% end %>

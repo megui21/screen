@@ -1,0 +1,8 @@
+<h1>/videos/id/reviews/new</h1>
+
+
+<h3>Add </h3>
+<%= simple_form_for [@interview, @video] do |f| %>
+<%= f.input :name %>
+  <%= f.submit class: "btn btn-primary"%>
+<% end %>
